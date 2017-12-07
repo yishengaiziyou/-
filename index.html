@@ -5,7 +5,8 @@
 	<title>Document</title>
 <style>
 	body{
-		margin: 0px;
+		margin: 0;
+		padding: 0;
 	}
 	img{
 		display: block;
@@ -24,34 +25,39 @@
 		height: 65px;
 		background: rgba(0, 0, 0, .5);
 		z-index: 99999;
-
+		outline: none;
+		border: 0;
+		font-size: 30px;
+		color: #fff;
+		cursor: pointer;
 	}
 	.left{
 		position: absolute;
-		top: 200px;
+		top: 500px;
 		left: 234px;
 	}
 	.right{
 		position: absolute;
-		top: 200px;
-		left: 1166px;
+		top: 500px;
+		right: 0;
 	}
 	.arr{
-		width: 400px;
-		height: 10px;
+		width: auto;
+		height: 20px;
 		position: absolute;
-		top: 450px;
-		left: 513px;
+		bottom: 0;
+		left: 591px;
 		z-index: 100;
 		display: flex;
 		justify-content: space-between;
 	}
 	.arr .dian{
-		width: 10px;
-		height: 10px;
+		width: 20px;
+		height: 20px;
 		background: #fff;
 		border-radius: 50%;
 		cursor: pointer;
+		margin: 0 5px;
 	}
 	.arr .dian1{
 		background: greenyellow;
@@ -130,65 +136,40 @@
 	    outline: 0;
 	}
 	.banna{
-		width: 1226px;
-		height: 460px;
-		margin: 0 auto;
+		width: 100%;
+		height: 949px;
 		position: relative;
-	}
-	.banna .icon-xiangzuo1{
-		width: 28px;
-		height: 60px;
-		position: absolute;
-		top: 200px;
-		right: 0;
-		font-size: 30px;
-		margin-right: 0px;
-		color: #ABB1C0;
-		z-index: 99;
-		line-height: 60px;
-	}
-	.banna .icon-xiangzuo{
-		width: 28px;
-		height: 60px;
-		position: absolute;
-		top: 200px;
-		left: 234px;
-		font-size: 30px;
-		color: #ABB1C0;
-		z-index: 99;
-		line-height: 60px;
 	}
 	.banna .icon-xiangzuo1:hover,.banna .icon-xiangzuo:hover{
 		color: #fff;
 		background: rgba(0, 0, 0, 0.5);
 	}
 	.banna .wuyifan .bbj{
-		width: 1226px;
-		height: 460px;
+		width: 100%;
+		height: 949px;
 		position: absolute;
 		top: 0;
 		left: 0;
 		opacity: 0;
 	}
 	.banna .wuyifan .bbj img{
-		width: 1226px;
-		height: 460px;
+		width: 100%;
+		height: 949px;
 	}
 	.banna .wuyifan .bbj1{
 		opacity: 1;
 	}
 	.banna .daohangleft{
 		width: 234px;
-		height: 420px;
+		height: 949px;
 		background: rgba(0, 0, 0, .7);
 		position: absolute;
-		padding: 20px 0;
 	}
 	.banna .daohangleft .kk{
 		width: 204px;
-		height: 42px;
+		height: 94.9px;
 		padding-left: 30px;
-		line-height: 42px;
+		line-height: 100px;
 		color: #fff;
 		font-size: 15px;
 		float: left;
@@ -449,21 +430,4 @@
 	left.onclick = function(){
 		move('left');
 	}
-</script>
-<script>
-	let xuanxiangkaka = document.getElementsByClassName('xuanxiangkaka');
-		let connn = document.getElementsByClassName('connn');
-		for(let i = 0;i < xuanxiangkaka.length;i++){
-			xuanxiangkaka[i].onmouseover = function(){
-				for(j = 0;j < connn.length;j++){
-					connn[j].classList.remove('connn-active');
-				}
-				connn[i].classList.add('connn-active');
-				xuanxiangkaka[i].onmouseout = function(){
-				for(j = 0;j < connn.length;j++){
-					connn[j].classList.remove('connn-active');
-				}
-				}
-			}
-		}
 </script>
